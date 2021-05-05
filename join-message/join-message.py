@@ -13,18 +13,6 @@ class JoinMessagePlugin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.db = bot.plugin_db.get_partition(self)
-        
-    @commands.command(aliases=["swms"])
-    @checks.has_permissions(PermissionLevel.ADMIN)
-    async def setjoinmessage(self, ctx, *, message):
-        """Set a message to show a user after they join."""
-        await self.db.find_one_and_update(
-            {"_id": "mtp-join-config"},
-            {"$set": {"mtp-join-message": {"message": message}}},
-            upsert=True,
-        )
-
-        await ctx.send("Successfully set the message.")
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
@@ -37,7 +25,7 @@ class JoinMessagePlugin(commands.Cog):
         try:
             message = config["mtp-join-message"]["message"]
             channel = self.bot.get_channel(328236301021347841)
-            await channel.send(message.replace("{user}", str(member)))
+            await channel.send(f"{member.mention} is taking a rest at the Inn.")
         except:
             return
 
