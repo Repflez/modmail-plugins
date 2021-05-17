@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from core import checks
 
 class MTPSayPlugin(commands.Cog):
     def __init__ (self, bot):
