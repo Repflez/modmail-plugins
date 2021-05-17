@@ -8,6 +8,7 @@ class MTPSayPlugin(commands.Cog):
         self.bot = bot
 
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
+    @commands.group(name="mtpsay")
     async def mtpsay(self, ctx, message: str):
         """I'll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda."""
         channel = self.bot.get_channel(328236301021347841)
