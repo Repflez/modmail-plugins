@@ -9,10 +9,10 @@ class MTPSayPlugin(commands.Cog):
 
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
     @commands.group(name="mtpsay")
-    async def mtpsay(self, ctx, message: str):
+    async def mtpsay(self, ctx, message):
         """I'll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda."""
         channel = self.bot.get_channel(328236301021347841)
-        await channel.send(message)
+        await channel.send(f"{message}")
 
 def setup(bot):
     bot.add_cog(MTPSayPlugin(bot))
