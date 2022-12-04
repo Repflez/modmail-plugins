@@ -71,5 +71,5 @@ class Mediaonly(commands.Cog):
         await ctx.send(f'Config set: Status {self.config.get("status", True)}.')
 
 
-def setup(bot):
+async def setup(bot):
     bot.add_cog(Mediaonly(bot))
