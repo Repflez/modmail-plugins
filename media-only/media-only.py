@@ -72,4 +72,4 @@ class Mediaonly(commands.Cog):
 
 
 async def setup(bot):
-    bot.add_cog(Mediaonly(bot))
+    await bot.add_cog(Mediaonly(bot))
