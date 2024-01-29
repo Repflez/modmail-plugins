@@ -29,5 +29,5 @@ class MTPSayPlugin(commands.Cog):
             pass
         await channel.send(f"{message}")
 
-def setup(bot):
+await def setup(bot):
     await bot.add_cog(MTPSayPlugin(bot))
