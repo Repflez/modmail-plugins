@@ -12,12 +12,10 @@ class MTPSayPlugin(commands.Cog):
     async def innsay(self, ctx, *, message: str):
         """I'll have two number 9s, a number 9 large, a number 6 with extra dip, a number 7, two number 45s, one with cheese, and a large soda."""
         channel = self.bot.get_channel(1140088471420145674)
-        
         try:
             await ctx.message.delete()
         except discord.Forbidden:
             pass
-        
         await channel.send(f"{message}")
 
     @checks.has_permissions(PermissionLevel.ADMINISTRATOR)
@@ -25,12 +23,10 @@ class MTPSayPlugin(commands.Cog):
     async def cafesay(self, ctx, *, message: str):
         """I'll have know. I know my bread very well."""
         channel = self.bot.get_channel(1140091635577913378)
-        
         try:
             await ctx.message.delete()
         except discord.Forbidden:
             pass
-        
         await channel.send(f"{message}")
 
 def setup(bot):
