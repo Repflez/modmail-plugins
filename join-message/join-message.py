@@ -33,7 +33,7 @@ class JoinMessagePlugin(commands.Cog):
         if channel is None:
             return  # Avoid crash if channel not found
 
-        message_template = random.choice(self.messages)
+        message_template = random.choice(self.join_messages)
         message = message_template.format(member=member.mention)
 
         await channel.send(message)
