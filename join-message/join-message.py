@@ -29,7 +29,7 @@ class JoinMessagePlugin(commands.Cog):
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
-        channel = self.bot.get_channel(1140088471420145674)
+        channel = self.bot.get_channel(1473099778844917790)
 
         if channel is None:
             return  # Avoid crash if channel not found
