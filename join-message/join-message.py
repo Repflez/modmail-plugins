@@ -24,7 +24,14 @@ class JoinMessagePlugin(commands.Cog):
             "{member}'s QR Code has been scanned.",
             "Transferred {member} from the Wii.",
             "{member} is playing a Worldwide VS Race!",
-            "{member} is using tilt controls!"
+            "{member} is using tilt controls!",
+            "{member} has Yeah'd this message.",
+            "{member} has bought HP Bananas.",
+
+            # Server specific join messages
+            "The Bread Council has decided that {member} is welcome!",
+            "{member} wants to share their bread with the server.",
+            "Hey! {member} has bread!"
         ]
 
     @commands.Cog.listener()
