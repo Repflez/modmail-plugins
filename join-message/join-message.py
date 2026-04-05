@@ -5,7 +5,7 @@ import random
 class JoinMessagePlugin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.join_messages = [
+        self.join_messages = {
             #"{member} has been added!":                                         None,
             #"You received a Mii! It's {member}!":                               None,
             #"{member} has entered the apartment."                               None,
@@ -32,7 +32,7 @@ class JoinMessagePlugin(commands.Cog):
             "The Bread Council has decided that {member} is welcome!":          "🍞",
             "{member} wants to share their bread with the server.":             "🍞",
             "Hey! {member} has bread!":                                         "🍞",
-        ]
+        }
 
     @commands.Cog.listener()
     async def on_member_join(self, member):
