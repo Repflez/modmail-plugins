@@ -15,7 +15,7 @@ class JoinMessagePlugin(commands.Cog):
             "Streetpassed with {member}!":                                      None,
             "Added {member} to the player list":                                None,
             "{member} joins the fight!":                                        None,
-            "{member} has visited Hayley's Ranch!":                             None,
+            "{member} has visited Hayley's Ranch!":                             "<:HayleyHey:1490867198619815967>",
             "{member} is trotting the globe.":                                  None,
             "{member} is planting flowers!":                                    "🌸",
             "{member} has joined the Party Walk!":                              None,
